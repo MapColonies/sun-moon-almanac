@@ -1,0 +1,36 @@
+{
+  "name": "@map-colonies/sun-moon-almanac",
+  "version": "1.0.0",
+  "description": "NodeJS library for storing all of the geodetic tools which need to be written in C++",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@semantic-release/gitlab-config": "^12.0.1",
+    "husky": "^8.0.3",
+    "mocha": "^10.2.0",
+    "semantic-release": "^21.1.1"
+  },
+  "dependencies": {
+    "bindings": "^1.5.0",
+    "nan": "^2.14.0",
+    "node-gyp": "^6.1.0"
+  },
+  "scripts": {
+    "build": "node-gyp configure && node-gyp build",
+    "test": "mocha \"test/**/*.spec.js\" --timeout 2500",
+    "publish": "semantic-release"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-push": "npm test"
+    }
+  }
+}

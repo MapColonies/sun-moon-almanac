@@ -1,0 +1,42 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Lock files
+.lock-wscript
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# test coverage directories
+lib-cov #jscoverage/JSCover
+coverage #istanbul
+.nyc_output #nyc
+
+# Dependency directories
+node_modules
+jspm_packages
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Destination folder JS files
+build
+coverage
+
+# IDE files
+/.vscode
+.idea
+
+# Misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
