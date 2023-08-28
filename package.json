@@ -13,12 +13,12 @@
     "semantic-release": "^21.1.1"
   },
   "dependencies": {
-    "bindings": "^1.5.0",
-    "nan": "^2.14.0",
-    "node-gyp": "^6.1.0"
+    "bindings": "1.5.0",
+    "nan": "2.14.2",
+    "node-gyp": "^9.4.0"
   },
   "scripts": {
-    "build": "node-gyp configure && node-gyp build",
+    "build": "npx node-gyp configure && npx node-gyp build",
     "test": "mocha \"test/**/*.spec.js\" --timeout 2500",
     "publish": "semantic-release"
   },

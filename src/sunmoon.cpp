@@ -1,5 +1,5 @@
 #include <nan.h>
-#include <node.h>
+// #include <node.h>
 
 #include "./lib/MoonIluminationCalculator.h"
 #include "./lib/Location.h"
@@ -93,5 +93,5 @@ namespace sunmoon
         NODE_SET_METHOD(exports, "calculateMoonStats", CalculateMoonStats);
     }
 
-    NODE_MODULE(NODE_GYP_MODULE_NAME, Initialize);
+    NODE_MODULE(sunmoon, Initialize)
 } // namespace sunmoon

@@ -1,28 +1,27 @@
 {
-
 	"targets": [
 		{
 			"target_name": "sun-moon-almanac",
-			"cflags_cc": ["-std=c++2a"],
+			"cflags_cc": ["-std=c++0x"],
 			"sources": [
-				"src/sun-moon.cpp",
-				"src/lib/sun-moon/DateTime.cpp",
-				"src/lib/sun-moon/DMS.cpp",
-				"src/lib/sun-moon/InterpolationCalculator.cpp",
-				"src/lib/sun-moon/Location.cpp",
-				"src/lib/sun-moon/MoonCoordinates.cpp",
-				"src/lib/sun-moon/MoonIluminationCalculator.cpp",
-				"src/lib/sun-moon/MoonIluminationData.cpp",
-				"src/lib/sun-moon/RiseSetInfo.cpp",
-				"src/lib/sun-moon/SunCoordinates.cpp",
-				"src/lib/sun-moon/SunCoordinatesMotion.cpp",
-				"src/lib/sun-moon/SunTwilightsCalculator.cpp",
-				"src/lib/sun-moon/SunTwilightsData.cpp",
-				"src/lib/sun-moon/Utils.cpp",
+				"src/sunmoon.cpp",
+				"src/lib/DateTime.cpp",
+				"src/lib/DMS.cpp",
+				"src/lib/InterpolationCalculator.cpp",
+				"src/lib/Location.cpp",
+				"src/lib/MoonCoordinates.cpp",
+				"src/lib/MoonIluminationCalculator.cpp",
+				"src/lib/MoonIluminationData.cpp",
+				"src/lib/RiseSetInfo.cpp",
+				"src/lib/SunCoordinates.cpp",
+				"src/lib/SunCoordinatesMotion.cpp",
+				"src/lib/SunTwilightsCalculator.cpp",
+				"src/lib/SunTwilightsData.cpp",
+				"src/lib/Utils.cpp",
 			],
 			"include_dirs": [
+				"<!(node -e \"require('nan')\")",
 				"src/**/*.h",
-				"<!(node -e \"require('nan')\")"
 			]
 		}
 	]
